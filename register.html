@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký User</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+
+    <div class="register">
+        <div class="header">
+            <h2>Đăng ký User</h2>
+        </div>
+
+        <div class="content">
+            <form id="registrationForm" onsubmit="return validateForm()">
+                <div class="content-form">
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" name="fullName" required maxlength="200">
+                    <span class="error" id="fullNameError"></span><br>
+                </div>
+    
+                <div class="content-form">
+                    <label for="userName">User Name:</label>
+                    <input type="text" id="userName" name="userName" required maxlength="200" pattern="[a-zA-Z0-9_]+">
+                    <span class="error" id="userNameError"></span><br>
+                </div>
+    
+                <div class="content-form">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required minlength="6" maxlength="50">
+                    <span class="error" id="passwordError"></span><br>
+                </div>
+    
+                <div class="content-form">
+                    <label for="rePassword">Re-enter Password:</label>
+                <input type="password" id="rePassword" name="rePassword" required>
+                <span class="error" id="rePasswordError"></span><br>
+                </div>
+    
+    
+                <div class="content-form">
+                    <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required maxlength="100">
+                <span class="error" id="emailError"></span><br>
+                </div>
+    
+                <div class="content-form">
+                    <label for="dob">Date of birth:</label>
+                <input type="date" id="dob" name="dob" required max="9999-12-31">
+                <span class="error" id="dobError"></span><br>
+                </div>
+    
+                <div class="content-form">
+                    <label for="address">Address:</label>
+                <textarea id="address" name="address" maxlength="500"></textarea><br>
+                </div>
+    
+                <div class="content-form">
+                    <label for="mobile">Mobile:</label>
+                <input type="tel" id="mobile" name="mobile" pattern="^(?:\+84|0)(\d{9,10})$" required>
+                <span class="error" id="mobileError"></span><br>
+                </div>
+    
+                <div class="content-form1">
+                    <button type="submit" id="submit">Register</button>
+                    <button type="button" id="button" onclick="resetForm()">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+<script src="register.js"></script>
+
+</body>
+</html>
